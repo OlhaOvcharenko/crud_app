@@ -1,17 +1,29 @@
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
+import PostAdd from "./components/features/Post Add/PostAdd";
+import PostEdit from "./components/features/Post Edit/PostEdit";
+import Home from "./components/pages/Home/Home";
+import About from "./components/pages/About/About";
+import SinglePost from "./components/views/SinglePost/SinglePost";
+import { Container } from "react-bootstrap";
+import Header from "./components/views/Header/Header";
+import Footer from "./components/views/Footer/Footer";
 
 function App() {
   return (
     <main>
-      <Routes>
-          <Route path="/" element={'HOME'}/>
-          <Route path="/post/:id" element={'Single Page'}/>
-          <Route path="/post/add" element={'Add Page'}/>
-          <Route path="/post/edit/:id" element={'Edit Page'} />
-          <Route path="/about" element={'About'}/>
+      <Container>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />}/>
+          <Route path="/post/:id" element={<SinglePost />}/>
+          <Route path="/post/add" element={<PostAdd />}/>
+          <Route path="/post/edit/:id" element={<PostEdit />} />
+          <Route path="/about" element={<About />}/>
           <Route path="*" element={'Not found'}/>
         </Routes>
+        <Footer />
+      </Container>
     </main>
   );
 }
