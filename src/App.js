@@ -4,7 +4,7 @@ import PostAdd from "./components/features/Post Add/PostAdd";
 import PostEdit from "./components/features/Post Edit/PostEdit";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
-import SinglePost from "./components/views/SinglePost/SinglePost";
+import SinglePost from "./components/features/SinglePost/SinglePost";
 import { Container } from "react-bootstrap";
 import Header from "./components/views/Header/Header";
 import Footer from "./components/views/Footer/Footer";

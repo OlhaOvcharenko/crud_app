@@ -1,24 +1,33 @@
-import { Card } from "react-bootstrap";
+
+import  { Row } from "react-bootstrap";
+import PostCard from "../PostCard/PostCard";
+import { getAllPosts } from "../../../redux/postsRedux";
+import { useSelector } from "react-redux";
+import  { Stack } from "react-bootstrap";
 import { Button } from "react-bootstrap";
-import  { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const AllPosts = (props) => {
- 
-    return(
 
-      <Col  className="col-lg-4 col-sm-12 col-md-6 px-2 py-2">
-      <Card >
-        <Card.Body>
-          <Card.Title>{props.title}</Card.Title>
-          <Card.Text className="mb-2"><b>Author:</b>  {props.author}</Card.Text>
-          <Card.Text className="mb-2"><b>Published:</b> {props.publishedDate}</Card.Text>
-          <Card.Text>{props.shortDescription}</Card.Text>
-          <Button variant="primary">Read more</Button>
-        </Card.Body>
-      </Card>
-      </Col>
-      
-    )
+  const posts = useSelector((state) => getAllPosts(state, props.id))
+ 
+  return(
+    <div>
+      <Stack direction="horizontal" gap={4}>
+          <div className="p-2"><h1>All posts </h1></div>
+          <div className="p-2 ms-auto" >
+            <Link key={props.id} to={`/post/add`} >
+              <Button variant="outline-info">Add post</Button>{' '}
+            </Link>
+          </div>
+      </Stack>
+      <Row className="row my-5">
+        {posts.map((post) => (
+        <PostCard key={post.id} {...post} />
+        ))}
+      </Row>
+    </div>   
+  )
 }
 
 export default AllPosts;
