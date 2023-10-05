@@ -1,6 +1,10 @@
 
-.klas {
-    padding-left: 0;
-    padding-right: 0;
-    color: white;
+a .graylink {
+    color: lightgreen; 
+    text-decoration: none;
 }
+  
+.graylink:hover {
+    color: white; /* Change to white on hover */
+}
+
