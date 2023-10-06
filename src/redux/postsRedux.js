@@ -5,13 +5,17 @@ export const getSinglePost = ({posts}, postId) => posts.filter((post) => post.po
 
 // actions
 const createActionName = actionName => `app/posts/${actionName}`;
-const READ_MORE = createActionName('READ_MORE');
+const REMOVE_POST = createActionName('REMOVE_POST');
 
 // action creators
-
+export const deletePost = payload => ({type: REMOVE_POST, payload});
 
 const postsReducer = (statePart = [], action) => {
   switch (action.type) {
+
+    case REMOVE_POST:
+    return statePart.filter((post) => post.id !== action.payload);
+
     default:
       return statePart;
   };

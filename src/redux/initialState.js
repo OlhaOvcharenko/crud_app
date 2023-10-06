@@ -10,7 +10,7 @@ const initialState = {
     },
 
     {
-      id: '1',
+      id: '2',
       title: 'Article title',
       author: 'John Doe',
       publishedDate: '02-02-2022',
@@ -19,7 +19,7 @@ const initialState = {
     },
 
     {
-      id: '1',
+      id: '3',
       title: 'Article title',
       author: 'John Doe',
       publishedDate: '02-02-2022',
