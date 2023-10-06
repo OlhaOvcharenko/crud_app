@@ -2,10 +2,17 @@ import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-import styles from "../NavBar/NavBar.module.scss"
+import styles from "../NavBar/NavBar.module.scss";
+import { useState } from "react";
 
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState(null);
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
     return(
       <Navbar bg="primary" expand="lg" className={"mt-4 mb-4 rounded"}>
         <Container>

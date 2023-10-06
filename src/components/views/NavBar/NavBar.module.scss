@@ -5,7 +5,13 @@ a .graylink {
 }
   
 .graylink:hover {
-    color: white; /* Change to white on hover */
+    color: white; 
 }
 
+.navbar a {
+    color: green;
+}
 
+.navbar .active a {
+    color: red;
+}
