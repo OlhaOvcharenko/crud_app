@@ -8,7 +8,6 @@ import { addPost } from "../../../redux/postsRedux";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from "react-router-dom";
-import { InputGroup } from "react-bootstrap";
 import moment from "moment";
 
 
@@ -46,8 +45,6 @@ const AddPostForm = (props) => {
 
         navigate('/');
     };
-
-    
 
     return (
 
