@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
-import PostAdd from "./components/features/Post Add/PostAdd";
-import PostEdit from "./components/features/Post Edit/PostEdit";
+import PostAdd from "./components/views/Post Add/PostAdd";
+import PostEdit from "./components/views/Post Edit/PostEdit";
 import Home from "./components/pages/Home/Home";
 import About from "./components/pages/About/About";
 import SinglePost from "./components/features/SinglePost/SinglePost";
