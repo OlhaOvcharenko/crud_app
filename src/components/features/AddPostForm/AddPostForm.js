@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import { FloatingLabel, Form } from "react-bootstrap";
 import  { Row } from "react-bootstrap";
 import  { Col } from "react-bootstrap";
 import  { Button } from "react-bootstrap";
@@ -8,8 +8,9 @@ import { addPost } from "../../../redux/postsRedux";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from "react-router-dom";
-
+import { InputGroup } from "react-bootstrap";
 import moment from "moment";
+
 
 const AddPostForm = (props) => {
 
@@ -75,12 +76,12 @@ const AddPostForm = (props) => {
                     </Col>
 
                     <Col lg={12} xs={12} md={10} className="px-1">
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Group className="mb-3" controlId="floatingTextarea1">
                             <Form.Label>Short description</Form.Label>
                             <Form.Control as="textarea" rows={6} placeholder="Leave a comment here"
                             value={shortDescription} onChange={e => setShortDescription(e.target.value)}/>
                         </Form.Group>
-                        <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                        <Form.Group className="mb-3" controlId="floatingTextarea2">
                             <Form.Label>Main content</Form.Label>
                             <Form.Control as="textarea" rows={6} placeholder="Leave a comment here" 
                             value={content} onChange={e => setContent(e.target.value)} />
