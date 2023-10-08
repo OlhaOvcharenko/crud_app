@@ -29,7 +29,7 @@ const SinglePost = (props) => {
                     <Col className="d-flex justify-content-end align-items-center">
                     <Link key={props.id} to={`/post/edit/${postId}`} className={'px-2'}>
                         <Button variant="outline-info" className={'px-4'}>Edit</Button>
-                    </Link>
+</Link>
                     <RemovePost id={postData.id}/>
                     </Col>
                 </Row>
