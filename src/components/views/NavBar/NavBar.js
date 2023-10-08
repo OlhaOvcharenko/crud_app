@@ -2,7 +2,7 @@ import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-
+import './NavBar.module.scss';
 
 const NavBar = () => {
   
