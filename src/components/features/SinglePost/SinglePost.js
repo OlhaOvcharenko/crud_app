@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 import { getPostById } from "../../../redux/postsRedux";
 import { Navigate } from "react-router-dom";
 import RemovePost from "../RemovePost/RemovePost";
+import { NavLink } from "react-bootstrap";
 
 const SinglePost = (props) => {
 
@@ -25,10 +26,10 @@ const SinglePost = (props) => {
                     <h1  className={'px-3'}>{postData.title}</h1>
                     </Col>
                     <Col className="d-flex justify-content-end align-items-center">
-                        <Link key={props.id} to={`/post/edit/${props.id}`} className={'px-2'}>
-                            <Button variant="outline-info" className={'px-4'}>Edit</Button>
-                        </Link>
-                        <RemovePost id={postData.id}/>
+                    <Link key={props.id} to={`/post/edit/${postId}`} className={'px-2'}>
+                        <Button variant="outline-info" className={'px-4'}>Edit</Button>
+                    </Link>
+                    <RemovePost id={postData.id}/>
                     </Col>
                 </Row>
                 <Card className="border-0" >

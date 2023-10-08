@@ -2,10 +2,10 @@ import { Card } from "react-bootstrap";
 import  { Col } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const PostCard = (props) => {
-   
-  //const posts = useSelector((state) => getAllPosts(state, props.id))
+
   return(
 
     <Col  className="col-lg-4 col-sm-12 col-md-6 px-2 py-2">

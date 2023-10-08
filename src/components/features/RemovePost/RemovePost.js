@@ -21,7 +21,7 @@ const RemovePost = ({ id }) => {
 
     return(
         <div>
-           <Button variant="outline-danger" onClick={handleShow} >Delete post</Button>{' '}
+           <Button variant="outline-danger" onClick={handleShow} classNmae={'mr-2'} >Delete post</Button>{' '}
 
            <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
