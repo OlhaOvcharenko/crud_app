@@ -2,6 +2,7 @@ import { Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { Navbar } from "react-bootstrap";
 import { Container } from "react-bootstrap";
+import styles from "./NavBar.module.scss";
 
 const NavBar = () => {
   
@@ -13,10 +14,10 @@ const NavBar = () => {
           <Navbar.Collapse id="mobile-menu" className="justify-content-end" >
             <Nav>
               <Nav.Link as={NavLink} to="/" >
-                Home
+                <span className={styles.link}>Home</span>
               </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
-                About
+                <span className={styles.link}>About</span>
               </Nav.Link>
            </Nav>
           </Navbar.Collapse>
