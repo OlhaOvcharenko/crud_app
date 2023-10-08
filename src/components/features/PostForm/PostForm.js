@@ -7,15 +7,18 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
 
+
 const PostForm = ({ action, actionText, ... props}) => {
 
     const [title, setTitle] = useState(props.title || '');
     const [author, setAuthor] = useState(props.author || '');
-    const [publishedDate, setSelectedDate] = useState(props.publishedDate || '');
+    const [publishedDate, setSelectedDate] = useState(props.date || '');
     const [shortDescription, setShortDescription] = useState(props.shortDescription || '');
     const [content, setContent] = useState(props.content || '');
     
-    
+    console.log(props.date,'publisheDate',
+    props.author,'author');
+
     const handleSubmit = e => {
         e.preventDefault();
         action({
@@ -23,6 +26,8 @@ const PostForm = ({ action, actionText, ... props}) => {
             publishedDate, 
             shortDescription, content });  
     };
+
+
 
     return (
 

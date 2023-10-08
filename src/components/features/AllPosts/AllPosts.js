@@ -8,6 +8,8 @@ import { getAllPosts } from '../../../redux/postsRedux';
 
 const AllPosts = () => {
   const posts = useSelector((state) => getAllPosts(state));
+   console.log(posts,"posts")
+  
 
   return (
     <div>
