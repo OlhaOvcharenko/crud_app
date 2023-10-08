@@ -20,7 +20,8 @@
     "react-scripts": "5.0.1",
     "redux": "4.1.2",
     "redux-devtools-extension": "2.13.9",
-    "sass": "1.65.1",
+    "sass": "^1.69.0",
+    "scss-loader": "^0.0.1",
     "shortid": "^2.2.16",
     "web-vitals": "^2.1.4"
   },

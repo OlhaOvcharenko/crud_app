@@ -1,15 +1,17 @@
 
 import  { Row } from "react-bootstrap";
-import PostCard from "../PostCard/PostCard";
-import { getAllPosts } from "../../../redux/postsRedux";
-import { useSelector } from "react-redux";
 import  { Stack } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { Col} from "react-bootstrap";
+import { Card } from "react-bootstrap";
+import { dateToStr } from "../../../utils/FormatDate";
+
+
 
 const AllPosts = (props) => {
 
-  const posts = useSelector((state) => getAllPosts(state, props.id))
+  const posts = useSelector((state) => getAllPosts(state))
  
   return(
     <div>
@@ -22,9 +24,20 @@ const AllPosts = (props) => {
           </div>
       </Stack>
       <Row className="row my-5">
-        {posts.map((post) => (
-        <PostCard key={post.id} {...post} />
-        ))}
+        <Col  className="col-lg-4 col-sm-12 col-md-6 px-2 py-2">
+          {posts.map(post=>    
+            <Card key={post.id}>
+              <Card.Body>
+                <Card.Title>{post.title}</Card.Title>
+                <Card.Text className="mb-2"><b>Author:</b>  {post.author}</Card.Text>
+                <Card.Text className="mb-2"><b>Published:</b> {dateToStr(post.publishedDate)}</Card.Text>
+                <Card.Text>{post.shortDescription}</Card.Text>
+                <Link key={post.id} to={`/post/${post.id}`}>
+                  <Button variant="primary">Read more</Button>
+                </Link>
+              </Card.Body>
+            </Card>)}
+        </Col>
       </Row>
     </div>   
   )

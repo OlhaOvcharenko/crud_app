@@ -5,7 +5,7 @@ import { editPost } from "../../../redux/postsRedux";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostById } from "../../../redux/postsRedux";
-import moment from "moment/moment";
+
 
 const EditPostForm = () => {
     const navigate = useNavigate();
@@ -14,6 +14,8 @@ const EditPostForm = () => {
     const { id } = useParams();
 
     const postData = useSelector(state => getPostById(state, id));
+
+    console.log('data:', postData)
 
     const handleSubmit = (post) => {
         dispatch(editPost({ ...post, id}));
@@ -25,6 +27,7 @@ const EditPostForm = () => {
             postId = {id}
             action={handleSubmit}
             actionText='Edit post'
+            post={postData}
             title={postData.title}
             author={postData.author}
             date={postData.publishedDate}

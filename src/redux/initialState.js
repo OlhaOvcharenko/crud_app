@@ -1,4 +1,5 @@
-import moment from "moment";
+
+
 
 const initialState = {
   posts:[
@@ -6,7 +7,7 @@ const initialState = {
       id: '1',
       title: 'Article title',
       author: 'John Doe',
-      publishedDate: moment().format('02-02-2022'),
+      publishedDate: new Date('02-02-2022'),
       shortDescription: 'Short description of the article...',
       content: 'Main content of the article'
     },
@@ -15,7 +16,7 @@ const initialState = {
       id: '2',
       title: 'Article title',
       author: 'John Doe',
-      publishedDate: moment().format('02-02-2022'),
+      publishedDate:new Date('02-02-2022'),
       shortDescription: 'Short description of the article...',
       content: 'Main content of the article'
     },
@@ -24,7 +25,7 @@ const initialState = {
       id: '3',
       title: 'Article title',
       author: 'John Doe',
-      publishedDate: moment().format('02-02-2022'),
+      publishedDate: new Date('02-02-2022'),
       shortDescription: 'Short description of the article...',
       content: 'Main content of the article'
     }

@@ -1,11 +1,10 @@
-import { FloatingLabel, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import  { Row } from "react-bootstrap";
 import  { Col } from "react-bootstrap";
 import  { Button } from "react-bootstrap";
 import { useState } from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
-import moment from "moment";
 
 
 const PostForm = ({ action, actionText, ... props}) => {
@@ -21,7 +20,7 @@ const PostForm = ({ action, actionText, ... props}) => {
         e.preventDefault();
         action({
             title, author, 
-            publishedDate: moment(props.publishedDate).format('DD-MM-YYYY'), 
+            publishedDate, 
             shortDescription, content });  
     };
 

@@ -8,7 +8,8 @@ import { useSelector } from "react-redux";
 import { getPostById } from "../../../redux/postsRedux";
 import { Navigate } from "react-router-dom";
 import RemovePost from "../RemovePost/RemovePost";
-import { NavLink } from "react-bootstrap";
+
+import { dateToStr } from "../../../utils/FormatDate";
 
 const SinglePost = (props) => {
 
@@ -35,7 +36,7 @@ const SinglePost = (props) => {
                 <Card className="border-0" >
                     <Card.Body>
                     <Card.Text className="mb-2"><b>Author:</b> {postData.author}</Card.Text>
-                    <Card.Text className="mb-3"><b>Published:</b> {postData.publishedDate}</Card.Text>
+                    <Card.Text className="mb-3"><b>Published:</b> {dateToStr(postData.publishedDate)}</Card.Text>
                     <Card.Text>{postData.content}</Card.Text>
                     </Card.Body>
                 </Card>
