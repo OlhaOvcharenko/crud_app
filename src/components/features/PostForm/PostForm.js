@@ -27,7 +27,10 @@ const PostForm = ({ action, actionText, ... props}) => {
             shortDescription, content });  
     };
 
-
+ /* 1. We get data to state by props from EditPostForm or PostForm
+     2.Title is putting into proper place into the code like value
+     3.Value is activated by function SetTitle/SetOthe...
+     4.Those function is activated after some action wich is provided in argument  */
 
     return (
 
