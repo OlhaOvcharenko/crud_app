@@ -5,6 +5,8 @@ import  { Button } from "react-bootstrap";
 import { useState } from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import ReactQuill from "react-quill";
+import 'react-quill/dist/quill.snow.css';
 
 
 
@@ -60,14 +62,15 @@ const PostForm = ({ action, actionText, ... props}) => {
 
                     <Col lg={12} xs={12} md={10} className="px-1">
                         <Form.Group className="mb-3" controlId="floatingTextarea1">
+                           
                             <Form.Label>Short description</Form.Label>
                             <Form.Control as="textarea" rows={6} placeholder="Leave a comment here"
-                            value={shortDescription} onChange={e => setShortDescription(e.target.value)}/>
+                            value={shortDescription} onChange={e => setShortDescription(e.target.value)}>
+                            </Form.Control>
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="floatingTextarea2">
                             <Form.Label>Main content</Form.Label>
-                            <Form.Control as="textarea" rows={6} placeholder="Leave a comment here" 
-                            value={content} onChange={e => setContent(e.target.value)} />
+                            <ReactQuill theme="snow" value={content} onChange={e => setContent()} />
                         </Form.Group>
                     </Col>
 
