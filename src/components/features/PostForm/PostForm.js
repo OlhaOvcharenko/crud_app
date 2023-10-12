@@ -17,9 +17,13 @@ const PostForm = ({ action, actionText, ... props}) => {
     const [publishedDate, setSelectedDate] = useState(props.date || '');
     const [shortDescription, setShortDescription] = useState(props.shortDescription || '');
     const [content, setContent] = useState(props.content || '');
+
     
-    console.log(props.date,'publisheDate',
-    props.author,'author');
+
+    const handleContentChange = (newContent) => {
+        setContent(newContent); 
+    };
+    
 
     const handleSubmit = e => {
         e.preventDefault();
@@ -70,7 +74,7 @@ const PostForm = ({ action, actionText, ... props}) => {
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="floatingTextarea2">
                             <Form.Label>Main content</Form.Label>
-                            <ReactQuill theme="snow" value={content} onChange={e => setContent()} />
+                            <ReactQuill theme="snow" value={content} onChange={handleContentChange} />
                         </Form.Group>
                     </Col>
 
