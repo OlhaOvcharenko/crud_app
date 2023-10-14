@@ -16,6 +16,9 @@ const NavBar = () => {
               <Nav.Link as={NavLink} to="/" >
                 <span className={styles.link}>Home</span>
               </Nav.Link>
+              <Nav.Link as={NavLink} to="/categories">
+                <span className={styles.link}>Categories</span>
+              </Nav.Link>
               <Nav.Link as={NavLink} to="/about">
                 <span className={styles.link}>About</span>
               </Nav.Link>

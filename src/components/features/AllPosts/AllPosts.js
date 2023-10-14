@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -9,7 +8,6 @@ import { getAllPosts } from '../../../redux/postsRedux';
 const AllPosts = () => {
   const posts = useSelector((state) => getAllPosts(state));
    console.log(posts,"posts")
-  
 
   return (
     <div>
@@ -34,6 +32,9 @@ const AllPosts = () => {
                 </Card.Text>
                 <Card.Text className="mb-2">
                   <b>Published:</b> {dateToStr(new Date(post.publishedDate))}
+                </Card.Text>
+                <Card.Text className="mb-2">
+                  <b>Category:</b> {post.category}
                 </Card.Text>
                 <Card.Text>{post.shortDescription}</Card.Text>
                 <Link to={`/post/${post.id}`}>
