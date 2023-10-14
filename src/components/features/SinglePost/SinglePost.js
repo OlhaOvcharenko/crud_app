@@ -3,10 +3,12 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
+
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { getPostById } from "../../../redux/postsRedux";
 import { Navigate } from "react-router-dom";
+
 import RemovePost from "../RemovePost/RemovePost";
 
 import { dateToStr } from "../../../utils/FormatDate";

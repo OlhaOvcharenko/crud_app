@@ -13,9 +13,6 @@ import Footer from "./components/views/Footer/Footer";
 import NotFound from "./components/pages/Not Found/NotFound"; 
 
 
-
-
-
 function App() {
   return (
     <main>
