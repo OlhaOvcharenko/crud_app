@@ -15,8 +15,6 @@ const Category = () => {
 
     const posts = useSelector((state) => filteredPostsByCategory(state, category));
 
-    if(posts===null)return(<p>No posts in this category</p>)
- 
     return (
         <div>
           <div className="p-2">
